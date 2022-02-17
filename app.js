@@ -8,6 +8,10 @@ thisDay.innerText = day.toLocaleString('en-us', { weekday: 'long' });
 // console.log(thisDay.innerText);
 
 doButton.addEventListener("click", () => {
+    if (doText.value == "") {
+        window.alert("Pls Enter task!");
+        return};
+
     const li = document.createElement('li');
     const input = document.createElement("input");
     const label = document.createElement("label");
@@ -25,7 +29,7 @@ doButton.addEventListener("click", () => {
     
     input.type = "checkbox";
     let checkBox = document.querySelectorAll("input[type=checkbox]")
-    console.log(checkBox);
+    // console.log(checkBox);
     
     checkBox.forEach((e)=>{
         e.addEventListener("change", ()=>{
